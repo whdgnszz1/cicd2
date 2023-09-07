@@ -49,4 +49,5 @@ cd $NODE_APP_DIR
 # Backend 앱 실행
 echo "> Starting Node Express app"
 cd $NODE_APP_DIR
-/usr/bin/yarn start
+pm2 kill
+/usr/bin/yarn start -f
