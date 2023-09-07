@@ -1,6 +1,6 @@
 REPOSITORY=/home/ubuntu/jonghun
 NODE_APP_DIR=$REPOSITORY/src
-# BACKEND_ENV_PATH=$NODE_APP_DIR/backend/.env
+ENV_PATH=$NODE_APP_DIR/.env
 # FRONTEND_ENV_PATH=$NODE_APP_DIR/frontend/.env
 
 
@@ -16,12 +16,12 @@ else
   sleep 5
 fi
 
-# # Backend 환경 변수 설정
-# if [ -f $BACKEND_ENV_PATH ]; then
-#     source $BACKEND_ENV_PATH
-# else
-#     echo "> backend.env 파일이 존재하지 않습니다."
-# fi
+# Backend 환경 변수 설정
+if [ -f $ENV_PATH ]; then
+    source $ENV_PATH
+else
+    echo "> backend.env 파일이 존재하지 않습니다."
+fi
 
 # # Frontend 환경 변수 설정
 # if [ -f $FRONTEND_ENV_PATH ]; then
