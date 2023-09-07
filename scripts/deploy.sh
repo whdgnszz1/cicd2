@@ -43,10 +43,10 @@ fi
 
 # Backend 의존성 패키지 설치
 echo "> Installing backend dependencies"
-cd $NODE_APP_DIR/src
+cd $NODE_APP_DIR
 /usr/bin/yarn install
 
 # Backend 앱 실행
 echo "> Starting Node Express app"
-cd $NODE_APP_DIR/src
+cd $NODE_APP_DIR
 /usr/bin/yarn start:pm2
